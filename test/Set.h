@@ -87,7 +87,6 @@ public:
 	std::string updateSet()
 	{
 		//accept only firsts that fit in capacity
-
 		int count = 0;
 		std::string str = " ";
 		for (auto it = rank.begin(); it != rank.end(); ++it)
@@ -105,7 +104,6 @@ public:
 			
 		}
 		return str;
-
 	}
 	
 	

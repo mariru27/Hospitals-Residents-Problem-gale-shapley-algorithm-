@@ -73,7 +73,6 @@ void gale_shapley()
 				//we will verify if this hospital is available in setB
 				if (setB[temp->first]._end() != setB[temp->first].isNameAvailable(it->first))
 				{
-					
 					std::string str = setB[temp->first].updateSet();
 					//update function will retun a string that represent resident that was rejected (from setB)
 					if (str != " ")
@@ -92,16 +91,12 @@ void gale_shapley()
 				++count;
 		}
 	}
-
 	//here we will store (in map resultPairs) all matched pairs
 	for (auto it = setA.begin(); it != setA.end(); ++it)
 	{
 		resultPairs[it->first] = it->second._isTakedAtLeastOne();
 	}
-	
 }
-
-
 
 void main()
 {
@@ -115,5 +110,4 @@ void main()
 	gale_shapley();
 
 	printResultPairs();
-
 }
